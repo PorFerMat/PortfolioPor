@@ -38,14 +38,14 @@ const skillsData = [
         name: 'Figma', 
         level: 'Expert', 
         levelClass: 'level-expert',
-        iconClass: 'fab fa-figma' // FontAwesome Figma icon
+        iconClass: 'fab fa-figma' 
     },
     { 
         id: 2, 
         name: 'Canva', 
         level: 'Expert', 
         levelClass: 'level-expert',
-        iconClass: 'fas fa-palette' // Alternative for Canva
+        iconClass: 'fas fa-palette' 
     },
     { 
         id: 3, 
@@ -59,7 +59,7 @@ const skillsData = [
         name: 'HTML/CSS', 
         level: 'Expert', 
         levelClass: 'level-expert',
-        iconClass: 'fas fa-code' // HTML/CSS can be represented by code icon
+        iconClass: 'fas fa-code' 
     },
     { 
         id: 5, 

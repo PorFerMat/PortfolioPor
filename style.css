@@ -836,81 +836,71 @@ body {
 
 /* Specific icon adjustments */
 .fa-figma {
-    color: #F24E1E; /* Figma orange */
+    color: #F24E1E; 
 }
 
 .fa-palette {
-    color: #00C4CC; /* Canva teal */
+    color: #00C4CC; 
 }
 
 .fa-github {
-    color: #333; /* GitHub black */
+    color: #333; 
 }
 
 .fa-code {
-    color: #E34F26; /* HTML orange */
+    color: #E34F26; 
 }
 
 .fa-file-excel {
-    color: #217346; /* Excel green */
+    color: #217346; 
 }
 
 .fa-python {
-    color: #3776AB; /* Python blue */
+    color: #3776AB; 
 }
 
 .fa-js {
-    color: #F7DF1E; /* JavaScript yellow */
+    color: #F7DF1E; 
 }
 
 .fa-c {
-    color: #00599C; /* C/C++ blue */
+    color: #00599C; 
 }
 
 .fa-fire {
-    color: #ff0000; /* firebase */
+    color: #ff0000; 
 }
 
 .fa-database {
-    color: #00599C; /* nysql*/
+    color: #00599C; 
 }
 
 .fa-node-js {
-    color: #009c2f; /* nysql*/
+    color: #009c2f; 
 }
 
 .ts-icon .fa-js {
-    color: #3178C6; /* TypeScript blue */
+    color: #3178C6; 
 }
 
 /* React */
 .fa-react {
-    color: #61DAFB; /* React cyan */
+    color: #61DAFB; 
 }
 
 /* React Native */
 .fa-mobile-alt {
-    color: #61DAFB; /* React Native same as React */
+    color: #61DAFB; 
 }
 
 /* Next.js */
 .fa-arrow-right {
-    color: #000000; /* Next.js black */
+    color: #000000; 
 }
 
 /* PHP */
 .fa-php {
-    color: #777BB4; /* PHP purple */
-}
-
-/* SQL (different shade than MySQL) */
-.sql-icon .fa-database {
-    color: #336791; /* SQL blue */
-}
-
-/* JSON */
-.json-icon .fa-code {
-    color: #000000; /* JSON black */
+    color: #777BB4; 
 }
 
 /* Alternative: Colored background versions */
