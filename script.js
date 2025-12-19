@@ -92,15 +92,15 @@ const skillsData = [
     { 
         id: 9, 
         name: 'Firebase', 
-        level: 'Proficient', 
-        levelClass: 'level-proficient',
+        level: 'Expert', 
+        levelClass: 'level-expert',
         iconClass: 'fas fa-fire' 
     },
     { 
         id: 10, 
         name: 'MySQL', 
-        level: 'Proficient', 
-        levelClass: 'level-proficient',
+        level: 'Expert', 
+        levelClass: 'level-expert',
         iconClass: 'fas fa-database' 
     },
     { 
@@ -134,22 +134,22 @@ const skillsData = [
     { 
         id: 15, 
         name: 'Next.js', 
-        level: 'Proficient', 
-        levelClass: 'level-proficient',
+        level: 'Competent', 
+        levelClass: 'level-competent',
         iconClass: 'fas fa-arrow-right' // Represents "next"
     },
     { 
         id: 16, 
         name: 'PHP', 
-        level: 'Proficient', 
-        levelClass: 'level-proficient',
+        level: 'Competent', 
+        levelClass: 'level-competent',
         iconClass: 'fab fa-php'
     },
     { 
         id: 17, 
         name: 'SQL', 
-        level: 'Proficient', 
-        levelClass: 'level-proficient',
+        level: 'Expert', 
+        levelClass: 'level-expert',
         iconClass: 'fas fa-database' // Same as MySQL, different color
     },
     { 
