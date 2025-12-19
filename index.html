@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poramat - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Global Navigation (Sticky Header) -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">Dorbesh</a>
+                
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <!--<li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#blog">Blog</a></li>-->
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#hire" class="hire-btn">Hire Me <i class="fas fa-arrow-right"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <!-- Left: Profile Card -->
+                <div class="profile-card">
+                    <div class="avatar-container">
+                        <div class="avatar">
+                            <img src="./pics/รูปนักศึกษา.png" alt="Poramat Ponglimagorn">
+                            <div class="dashed-border"></div>
+                        </div>
+                        
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                        
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nontaburi, Thailand</span>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-quote">
+                        <p>"Collaborated with cross-functional teams to streamline project workflows"</p>
+                    </div>
+                </div>
+                
+                <!-- Right: Bio Card -->
+                <div class="bio-card">
+                    <p class="greeting">Hello There!</p>
+                    
+                    <h1 class="hero-title">
+                        <span class="outline-text">I'm</span> <span class="bold-text">Poramat Ponglimagorn,</span> 
+                        <span class="outline-text">a Digital Engineering student</span> 
+                        <span class="bold-text">designing seamless digital experiences</span> 
+                        <span class="outline-text">that bridge technology and human interaction.</span>
+                    </h1>
+                    
+                    <div class="status-indicator">
+                        <div class="green-dot"></div>
+                        <span>Available for Hire</span>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <button class="download-btn">
+                            <span>Download CV</span>
+                            <i class="fas fa-download"></i>
+                        </button>
+                        <a href="#contact" class="contact-link">Let's Talk <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ticker/Marquee -->
+            <div class="ticker-container">
+                <div class="ticker">
+                    <div class="ticker-content">
+                        <span>Product Design</span>
+                        <i class="fas fa-circle"></i>
+                        <span>UI/UX Design</span>
+                        <i class="fas fa-circle"></i>
+                        <span>Web Development</span>
+                        <i class="fas fa-circle"></i>
+                        <span>Brand Identity</span>
+                        <i class="fas fa-circle"></i>
+                        <span>Product Design</span>
+                        <i class="fas fa-circle"></i>
+                        <span>UI/UX Design</span>
+                        <i class="fas fa-circle"></i>
+                        <span>Web Development</span>
+                        <i class="fas fa-circle"></i>
+                        <span>Brand Identity</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Skills Section -->
+    <section class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Let's Explore My Skills</h2>
+                <p>Tools and technologies I use to create amazing digital experiences</p>
+            </div>
+            
+            <div class="skills-grid" id="skillsGrid">
+                <!-- Skill cards will be generated by JavaScript -->
+            </div>
+            
+            <!-- Proficiency Legend -->
+            <div class="proficiency-legend">
+                <div class="legend-item">
+                    <span class="legend-dot expert"></span>
+                    <span>Expert</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot proficient"></span>
+                    <span>Proficient</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot competent"></span>
+                    <span>Competent</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section class="experience-section">
+        <div class="container">
+            <div class="two-column-layout">
+                <!-- Experience Column -->
+                <div class="column">
+                    <div class="section-header">
+                        <h3>Experience</h3>
+                        <p>My professional journey</p>
+                    </div>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <div class="icon-circle"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2021 - Present</div>
+                                <h4>Themeforest Market</h4>
+                                <p class="role">Web Designer</p>
+                                <p class="description">Creating user-centric web designs for various clients and projects.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <div class="icon-circle"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2021 - 2023</div>
+                                <h4>Envato Theme Developer</h4>
+                                <p class="role">Web Development</p>
+                                <p class="description">Developing responsive themes and templates for Envato marketplace.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <div class="icon-circle"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2021 - 2022</div>
+                                <h4>Marketing Expert GRP</h4>
+                                <p class="role">Web Developer & Business Partner</p>
+                                <p class="description">Collaborated on web development projects and business strategy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Education Column -->
+                <div class="column">
+                    <div class="section-header">
+                        <h3>Education</h3>
+                        <p>My academic background</p>
+                    </div>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <div class="icon-circle"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2013 - 2015</div>
+                                <h4>Bachelor Degree of Information Technology</h4>
+                                <p class="institution">State University Bangladesh</p>
+                                <p class="description">Specialized in software development and user interface design.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <div class="icon-circle"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2021 - 2024</div>
+                                <h4>Higher Secondary Education</h4>
+                                <p class="institution">Premium College United VC</p>
+                                <p class="description">Focused on advanced mathematics and computer science.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <div class="icon-circle"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2021 - 2024</div>
+                                <h4>Webster College</h4>
+                                <p class="institution">UI/UX Design</p>
+                                <p class="description">Specialized training in user interface and user experience design principles.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">Dorbesh</a>
+                    <p>Product Designer & Web Developer</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <!--<li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#works">Works</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#blog">Blog</a></li>-->
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Get In Touch</h4>
+                    <p><i class="fas fa-envelope"></i> hello@dorbesh.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dorbesh Baba. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
