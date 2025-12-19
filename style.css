@@ -405,7 +405,6 @@ body {
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    box-shadow: 4px 4px 28px rgba(33, 71, 35, 0.233);
     align-items: center;
     text-align: center;
 }
@@ -878,6 +877,61 @@ body {
 
 .fa-node-js {
     color: #009c2f; /* nysql*/
+}
+
+.ts-icon .fa-js {
+    color: #3178C6; /* TypeScript blue */
+}
+
+/* React */
+.fa-react {
+    color: #61DAFB; /* React cyan */
+}
+
+/* React Native */
+.fa-mobile-alt {
+    color: #61DAFB; /* React Native same as React */
+}
+
+/* Next.js */
+.fa-arrow-right {
+    color: #000000; /* Next.js black */
+}
+
+/* PHP */
+.fa-php {
+    color: #777BB4; /* PHP purple */
+}
+
+/* SQL (different shade than MySQL) */
+.sql-icon .fa-database {
+    color: #336791; /* SQL blue */
+}
+
+/* JSON */
+.json-icon .fa-code {
+    color: #000000; /* JSON black */
+}
+
+/* Alternative: Colored background versions */
+.skill-icon.colored-bg .fa-js {
+    color: white;
+    background: linear-gradient(135deg, #F7DF1E 0%, #323330 100%);
+}
+
+.skill-icon.colored-bg .fa-react {
+    color: white;
+    background: linear-gradient(135deg, #61DAFB 0%, #282C34 100%);
+}
+
+.skill-icon.colored-bg .fa-php {
+    color: white;
+    background: linear-gradient(135deg, #777BB4 0%, #4F5B93 100%);
+}
+
+.skill-icon.colored-bg .fa-node-js {
+    color: white;
+    background: linear-gradient(135deg, #68A063 0%, #333333 100%);
 }
 
 /*Using colored backgrounds for icons */

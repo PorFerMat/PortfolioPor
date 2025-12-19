@@ -115,36 +115,51 @@ const skillsData = [
         name: 'TypeScript', 
         level: 'Proficient', 
         levelClass: 'level-proficient',
-        iconClass: 'fas fa-database' 
+        iconClass: 'fab fa-js' // TypeScript uses the same JS icon with different color
     },
     { 
         id: 13, 
-        name: 'MySQL', 
+        name: 'React', 
         level: 'Proficient', 
         levelClass: 'level-proficient',
-        iconClass: 'fas fa-database' 
+        iconClass: 'fab fa-react'
     },
     { 
         id: 14, 
-        name: 'MySQL', 
+        name: 'React Native', 
         level: 'Proficient', 
         levelClass: 'level-proficient',
-        iconClass: 'fas fa-database' 
+        iconClass: 'fab fa-react' // Alternative for React Native
     },
     { 
         id: 15, 
-        name: 'MySQL', 
+        name: 'Next.js', 
         level: 'Proficient', 
         levelClass: 'level-proficient',
-        iconClass: 'fas fa-database' 
+        iconClass: 'fas fa-arrow-right' // Represents "next"
     },
     { 
         id: 16, 
-        name: 'MySQL', 
+        name: 'PHP', 
         level: 'Proficient', 
         levelClass: 'level-proficient',
-        iconClass: 'fas fa-database' 
+        iconClass: 'fab fa-php'
     },
+    { 
+        id: 17, 
+        name: 'SQL', 
+        level: 'Proficient', 
+        levelClass: 'level-proficient',
+        iconClass: 'fas fa-database' // Same as MySQL, different color
+    },
+    { 
+        id: 18, 
+        name: 'JSON', 
+        level: 'Proficient', 
+        levelClass: 'level-proficient',
+        iconClass: 'fas fa-code' // For JSON structure
+    }
+
 ];
 
 // Generate skills grid with logos
