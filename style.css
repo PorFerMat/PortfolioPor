@@ -868,7 +868,19 @@ body {
     color: #00599C; /* C/C++ blue */
 }
 
-/* Alternative: Using colored backgrounds for icons */
+.fa-fire {
+    color: #ff0000; /* firebase */
+}
+
+.fa-database {
+    color: #00599C; /* nysql*/
+}
+
+.fa-node-js {
+    color: #009c2f; /* nysql*/
+}
+
+/*Using colored backgrounds for icons */
 .skill-icon-colored {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     width: 60px;

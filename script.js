@@ -87,8 +87,64 @@ const skillsData = [
         name: 'C/C++', 
         level: 'Proficient', 
         levelClass: 'level-proficient',
-        iconClass: 'fas fa-c' // C icon (available in FontAwesome)
-    }
+        iconClass: 'fas fa-c' 
+    },
+    { 
+        id: 9, 
+        name: 'Firebase', 
+        level: 'Proficient', 
+        levelClass: 'level-proficient',
+        iconClass: 'fas fa-fire' 
+    },
+    { 
+        id: 10, 
+        name: 'MySQL', 
+        level: 'Proficient', 
+        levelClass: 'level-proficient',
+        iconClass: 'fas fa-database' 
+    },
+    { 
+        id: 11, 
+        name: 'Node.js', 
+        level: 'Proficient', 
+        levelClass: 'level-proficient',
+        iconClass: 'fab fa-node-js' 
+    },
+    { 
+        id: 12, 
+        name: 'TypeScript', 
+        level: 'Proficient', 
+        levelClass: 'level-proficient',
+        iconClass: 'fas fa-database' 
+    },
+    { 
+        id: 13, 
+        name: 'MySQL', 
+        level: 'Proficient', 
+        levelClass: 'level-proficient',
+        iconClass: 'fas fa-database' 
+    },
+    { 
+        id: 14, 
+        name: 'MySQL', 
+        level: 'Proficient', 
+        levelClass: 'level-proficient',
+        iconClass: 'fas fa-database' 
+    },
+    { 
+        id: 15, 
+        name: 'MySQL', 
+        level: 'Proficient', 
+        levelClass: 'level-proficient',
+        iconClass: 'fas fa-database' 
+    },
+    { 
+        id: 16, 
+        name: 'MySQL', 
+        level: 'Proficient', 
+        levelClass: 'level-proficient',
+        iconClass: 'fas fa-database' 
+    },
 ];
 
 // Generate skills grid with logos
