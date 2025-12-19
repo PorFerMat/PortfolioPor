@@ -903,7 +903,7 @@ body {
     color: #777BB4; 
 }
 
-/* Alternative: Colored background versions */
+/* Alternative: Colored background versions 
 .skill-icon.colored-bg .fa-js {
     color: white;
     background: linear-gradient(135deg, #F7DF1E 0%, #323330 100%);
@@ -922,10 +922,10 @@ body {
 .skill-icon.colored-bg .fa-node-js {
     color: white;
     background: linear-gradient(135deg, #68A063 0%, #333333 100%);
-}
+}*/
 
 /*Using colored backgrounds for icons */
-.skill-icon-colored {
+/*.skill-icon-colored {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     width: 60px;
     height: 60px;
@@ -939,18 +939,18 @@ body {
 .skill-icon-colored i {
     color: white;
     font-size: 28px;
-}
+}*/
 
 /* For HTML/CSS: Use two icons side by side */
-.html-css-icon {
+/*.html-css-icon {
     display: flex;
     gap: 10px;
 }
 
 .html-css-icon i:nth-child(1) {
-    color: #E34F26; /* HTML orange */
+    color: #E34F26;
 }
 
 .html-css-icon i:nth-child(2) {
-    color: #1572B6; /* CSS blue */
-}
+    color: #1572B6;
+}*/
