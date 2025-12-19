@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const downloadBtn = document.querySelector('.download-btn');
     downloadBtn.addEventListener('click', function() {
         // trigger a file download
-        alert('CV download would start in a real implementation. For now, this is a demo.');
+        alert('Havent uploaded CV yet!');
         
         // Add a visual feedback
         this.innerHTML = '<span>Downloading...</span><i class="fas fa-spinner fa-spin"></i>';
