@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 5, letter: 'W', name: 'Webflow', level: 'Expert', levelClass: 'level-expert' },
         { id: 6, letter: 'P', name: 'Python', level: 'Competent', levelClass: 'level-competent' },
         { id: 7, letter: 'W', name: 'WordPress', level: 'Proficient', levelClass: 'level-proficient' },
-        { id: 8, letter: 'Y', name: 'Sketch', level: 'Expert', levelClass: 'level-expert' }
+        { id: 8, letter: 'C', name: 'C/C++', level: 'Expert', levelClass: 'level-expert' }
     ];
     
     // Generate skills grid
@@ -75,10 +75,10 @@ document.addEventListener('DOMContentLoaded', function() {
         skillsGrid.appendChild(skillCard);
     });
     
-    // Download CV button functionality
+    // Download CV button function
     const downloadBtn = document.querySelector('.download-btn');
     downloadBtn.addEventListener('click', function() {
-        // In a real implementation, this would trigger a file download
+        // trigger a file download
         alert('CV download would start in a real implementation. For now, this is a demo.');
         
         // Add a visual feedback
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1500);
     });
     
-    // Smooth scroll for anchor links
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
