@@ -31,56 +31,95 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Skills data with proficiency levels
-    const skillsData = [
-        { id: 1, letter: 'F', name: 'Figma', level: 'Expert', levelClass: 'level-expert' },
-        { id: 2, letter: 'C', name: 'Canva', level: 'Expert', levelClass: 'level-expert' },
-        { id: 3, letter: 'G', name: 'Github', level: 'Proficient', levelClass: 'level-proficient' },
-        { id: 4, letter: 'H', name: 'HTML/CSS', level: 'Expert', levelClass: 'level-expert' },
-        { id: 5, letter: 'E', name: 'Exel', level: 'Proficient', levelClass: 'level-proficient' },
-        { id: 6, letter: 'P', name: 'Python', level: 'Proficient', levelClass: 'level-proficient' },
-        { id: 7, letter: 'J', name: 'JavaScript', level: 'Competent', levelClass: 'level-competent' },
-        { id: 8, letter: 'C', name: 'C/C++', level: 'Proficient', levelClass: 'level-proficient' }
-    ];
-    
-    // Generate skills grid
-    const skillsGrid = document.getElementById('skillsGrid');
+// Updated skillsData with logo classes
+const skillsData = [
+    { 
+        id: 1, 
+        name: 'Figma', 
+        level: 'Expert', 
+        levelClass: 'level-expert',
+        iconClass: 'fab fa-figma' // FontAwesome Figma icon
+    },
+    { 
+        id: 2, 
+        name: 'Canva', 
+        level: 'Expert', 
+        levelClass: 'level-expert',
+        iconClass: 'fas fa-palette' // Alternative for Canva
+    },
+    { 
+        id: 3, 
+        name: 'Github', 
+        level: 'Proficient', 
+        levelClass: 'level-proficient',
+        iconClass: 'fab fa-github'
+    },
+    { 
+        id: 4, 
+        name: 'HTML/CSS', 
+        level: 'Expert', 
+        levelClass: 'level-expert',
+        iconClass: 'fas fa-code' // HTML/CSS can be represented by code icon
+    },
+    { 
+        id: 5, 
+        name: 'Excel', 
+        level: 'Proficient', 
+        levelClass: 'level-proficient',
+        iconClass: 'fas fa-file-excel'
+    },
+    { 
+        id: 6, 
+        name: 'Python', 
+        level: 'Proficient', 
+        levelClass: 'level-proficient',
+        iconClass: 'fab fa-python'
+    },
+    { 
+        id: 7, 
+        name: 'JavaScript', 
+        level: 'Competent', 
+        levelClass: 'level-competent',
+        iconClass: 'fab fa-js'
+    },
+    { 
+        id: 8, 
+        name: 'C/C++', 
+        level: 'Proficient', 
+        levelClass: 'level-proficient',
+        iconClass: 'fas fa-c' // C icon (available in FontAwesome)
+    }
+];
 
-    skillsData.forEach((skill, index) => {
-        const skillCard = document.createElement('div');
-        skillCard.className = 'skill-card';
+// Generate skills grid with logos
+const skillsGrid = document.getElementById('skillsGrid');
+
+skillsData.forEach((skill) => {
+    const skillCard = document.createElement('div');
+    skillCard.className = 'skill-card';
+    skillCard.setAttribute('data-skill-id', skill.id);
     
-        
-        // if (index === 1) skillCard.classList.add('active');
+    skillCard.innerHTML = `
+        <div class="skill-icon">
+            <i class="${skill.iconClass}"></i>
+        </div>
+        <div class="skill-name">${skill.name}</div>
+        <div class="proficiency-level ${skill.levelClass}">${skill.level}</div>
+    `;
     
-        // Add a data attribute for better debugging
-        skillCard.setAttribute('data-skill-id', skill.id);
-    
-        skillCard.innerHTML = `
-            <div class="skill-icon">${skill.letter}</div>
-            <div class="skill-name">${skill.name}</div>
-            <div class="proficiency-level ${skill.levelClass}">${skill.level}</div>
-        `;
-    
-        // Add hover effect for skill cards
-        skillCard.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px)';
-            this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.1)';
-        });
-    
-        skillCard.addEventListener('mouseleave', function() {
-            // Reset transform and shadow on mouse leave
-            this.style.transform = 'translateY(0)';
-            this.style.boxShadow = 'none';
-        });
-    
-        // Add click event for debugging
-        skillCard.addEventListener('click', function() {
-            console.log(`Clicked: ${skill.name} (${skill.letter})`);
-        });
-    
-        skillsGrid.appendChild(skillCard);
+    // Add hover effect for skill cards
+    skillCard.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px)';
+        this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.1)';
     });
+    
+    skillCard.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = 'none';
+    });
+    
+    skillsGrid.appendChild(skillCard);
+});
 
     // Download CV button function
     const downloadBtn = document.querySelector('.download-btn');
@@ -98,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1500);
     });
     
-    // Smooth scroll
+    // scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
