@@ -45,36 +45,43 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Generate skills grid
     const skillsGrid = document.getElementById('skillsGrid');
-    
+
     skillsData.forEach((skill, index) => {
         const skillCard = document.createElement('div');
         skillCard.className = 'skill-card';
-        if (index === 1) skillCard.classList.add('active'); // Highlight Tailwind card
-        
+    
+        // Remove the automatic active class assignment
+        // if (index === 1) skillCard.classList.add('active'); // This was causing issues
+    
+        // Add a data attribute for better debugging
+        skillCard.setAttribute('data-skill-id', skill.id);
+    
         skillCard.innerHTML = `
             <div class="skill-icon">${skill.letter}</div>
             <div class="skill-name">${skill.name}</div>
             <div class="proficiency-level ${skill.levelClass}">${skill.level}</div>
         `;
-        
+    
         // Add hover effect for skill cards
         skillCard.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-10px)';
             this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.1)';
         });
-        
+    
         skillCard.addEventListener('mouseleave', function() {
-            if (!this.classList.contains('active')) {
-                this.style.transform = 'translateY(0)';
-                this.style.boxShadow = 'none';
-            } else {
-                this.style.transform = 'translateY(-10px)';
-            }
+            // Reset transform and shadow on mouse leave
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = 'none';
         });
-        
+    
+        // Add click event for debugging
+        skillCard.addEventListener('click', function() {
+            console.log(`Clicked: ${skill.name} (${skill.letter})`);
+        });
+    
         skillsGrid.appendChild(skillCard);
     });
-    
+
     // Download CV button function
     const downloadBtn = document.querySelector('.download-btn');
     downloadBtn.addEventListener('click', function() {
