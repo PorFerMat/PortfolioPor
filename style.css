@@ -143,7 +143,7 @@ body {
     background-color: var(--white);
     border-radius: var(--border-radius);
     padding: 30px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.219);
+    box-shadow: 4px 4px 28px rgba(33, 71, 35, 0.233);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -405,6 +405,7 @@ body {
     cursor: pointer;
     display: flex;
     flex-direction: column;
+    box-shadow: 4px 4px 28px rgba(33, 71, 35, 0.233);
     align-items: center;
     text-align: center;
 }
