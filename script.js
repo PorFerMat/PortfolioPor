@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: 2, letter: 'C', name: 'Canva', level: 'Expert', levelClass: 'level-expert' },
         { id: 3, letter: 'G', name: 'Github', level: 'Proficient', levelClass: 'level-proficient' },
         { id: 4, letter: 'H', name: 'HTML/CSS', level: 'Expert', levelClass: 'level-expert' },
-        { id: 5, letter: 'W', name: 'Webflow', level: 'Expert', levelClass: 'level-expert' },
+        { id: 5, letter: 'E', name: 'Exel', level: 'Proficient', levelClass: 'level-proficient' },
         { id: 6, letter: 'P', name: 'Python', level: 'Competent', levelClass: 'level-competent' },
         { id: 7, letter: 'W', name: 'WordPress', level: 'Proficient', levelClass: 'level-proficient' },
         { id: 8, letter: 'C', name: 'C/C++', level: 'Expert', levelClass: 'level-expert' }
