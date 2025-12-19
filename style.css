@@ -77,6 +77,7 @@ body {
     font-weight: 500;
     font-size: 16px;
     transition: var(--transition);
+    text-align: center;
 }
 
 .nav-menu a:hover {
@@ -96,6 +97,7 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    width: auto;
 }
 
 .hire-btn:hover {
