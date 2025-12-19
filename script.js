@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const skillCard = document.createElement('div');
         skillCard.className = 'skill-card';
     
-        // Remove the automatic active class assignment
-        // if (index === 1) skillCard.classList.add('active'); // This was causing issues
+        
+        // if (index === 1) skillCard.classList.add('active');
     
         // Add a data attribute for better debugging
         skillCard.setAttribute('data-skill-id', skill.id);
