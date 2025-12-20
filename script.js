@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 { id: 4, name: 'PHP', level: 'Competent', levelClass: 'level-competent-category', iconClass: 'fab fa-php' },
                 { id: 5, name: 'HTML', level: 'Expert', levelClass: 'level-expert-category', iconClass: 'fab fa-html5' },
                 { id: 6, name: 'CSS', level: 'Expert', levelClass: 'level-expert-category', iconClass: 'fab fa-css3-alt' },
-                { id: 7, name: 'JSON', level: 'Proficient', levelClass: 'level-proficient-category', iconClass: 'fas fa-braces' },
+                { id: 7, name: 'JSON', level: 'Proficient', levelClass: 'level-proficient-category', iconClass: 'fas fa-code' },
                 { id: 8, name: 'SQL', level: 'Expert', levelClass: 'level-expert-category', iconClass: 'fas fa-database' }
             ]
         },
