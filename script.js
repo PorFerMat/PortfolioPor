@@ -4,211 +4,185 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
     
-    menuToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
-        
-        // Transform hamburger to X
-        const spans = this.querySelectorAll('span');
-        if (navMenu.classList.contains('active')) {
-            spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-            spans[1].style.opacity = '0';
-            spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
-        } else {
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
-        }
-    });
-    
-    // Close menu when clicking on a link
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            navMenu.classList.remove('active');
-            menuToggle.querySelectorAll('span')[0].style.transform = 'none';
-            menuToggle.querySelectorAll('span')[1].style.opacity = '1';
-            menuToggle.querySelectorAll('span')[2].style.transform = 'none';
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            
+            // Transform hamburger to X
+            const spans = this.querySelectorAll('span');
+            if (navMenu.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
         });
-    });
-    
-// Updated skillsData with logo classes
-const skillsData = [
-    { 
-        id: 1, 
-        name: 'Figma', 
-        level: 'Expert', 
-        levelClass: 'level-expert',
-        iconClass: 'fab fa-figma' 
-    },
-    { 
-        id: 2, 
-        name: 'Canva', 
-        level: 'Expert', 
-        levelClass: 'level-expert',
-        iconClass: 'fas fa-palette' 
-    },
-    { 
-        id: 3, 
-        name: 'Github', 
-        level: 'Proficient', 
-        levelClass: 'level-proficient',
-        iconClass: 'fab fa-github'
-    },
-    { 
-        id: 4, 
-        name: 'HTML/CSS', 
-        level: 'Expert', 
-        levelClass: 'level-expert',
-        iconClass: 'fas fa-code' 
-    },
-    { 
-        id: 5, 
-        name: 'Excel', 
-        level: 'Proficient', 
-        levelClass: 'level-proficient',
-        iconClass: 'fas fa-file-excel'
-    },
-    { 
-        id: 6, 
-        name: 'Python', 
-        level: 'Proficient', 
-        levelClass: 'level-proficient',
-        iconClass: 'fab fa-python'
-    },
-    { 
-        id: 7, 
-        name: 'JavaScript', 
-        level: 'Competent', 
-        levelClass: 'level-competent',
-        iconClass: 'fab fa-js'
-    },
-    { 
-        id: 8, 
-        name: 'C/C++', 
-        level: 'Proficient', 
-        levelClass: 'level-proficient',
-        iconClass: 'fas fa-c' 
-    },
-    { 
-        id: 9, 
-        name: 'Firebase', 
-        level: 'Expert', 
-        levelClass: 'level-expert',
-        iconClass: 'fas fa-fire' 
-    },
-    { 
-        id: 10, 
-        name: 'MySQL', 
-        level: 'Expert', 
-        levelClass: 'level-expert',
-        iconClass: 'fas fa-database' 
-    },
-    { 
-        id: 11, 
-        name: 'Node.js', 
-        level: 'Proficient', 
-        levelClass: 'level-proficient',
-        iconClass: 'fab fa-node-js' 
-    },
-    { 
-        id: 12, 
-        name: 'TypeScript', 
-        level: 'Proficient', 
-        levelClass: 'level-proficient',
-        iconClass: 'fab fa-js' // TypeScript uses the same JS icon with different color
-    },
-    { 
-        id: 13, 
-        name: 'React', 
-        level: 'Proficient', 
-        levelClass: 'level-proficient',
-        iconClass: 'fab fa-react'
-    },
-    { 
-        id: 14, 
-        name: 'React Native', 
-        level: 'Proficient', 
-        levelClass: 'level-proficient',
-        iconClass: 'fab fa-react' // Alternative for React Native
-    },
-    { 
-        id: 15, 
-        name: 'Next.js', 
-        level: 'Competent', 
-        levelClass: 'level-competent',
-        iconClass: 'fas fa-arrow-right' // Represents "next"
-    },
-    { 
-        id: 16, 
-        name: 'PHP', 
-        level: 'Competent', 
-        levelClass: 'level-competent',
-        iconClass: 'fab fa-php'
-    },
-    { 
-        id: 17, 
-        name: 'SQL', 
-        level: 'Expert', 
-        levelClass: 'level-expert',
-        iconClass: 'fas fa-database' // Same as MySQL, different color
-    },
-    { 
-        id: 18, 
-        name: 'JSON', 
-        level: 'Proficient', 
-        levelClass: 'level-proficient',
-        iconClass: 'fas fa-code' // For JSON structure
+        
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                const spans = menuToggle.querySelectorAll('span');
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            });
+        });
     }
 
-];
+    // ===== Categorized Skills Data =====
+    const categorizedSkills = [
+        {
+            id: 1,
+            title: "PROGRAMMING LANGUAGES",
+            subtitle: "Languages I speak fluently",
+            icon: "<i class='fas fa-code'></i>",
+            skills: [
+                { id: 1, name: 'Python', level: 'Proficient', levelClass: 'level-proficient-category', iconClass: 'fab fa-python' },
+                { id: 2, name: 'JavaScript', level: 'Competent', levelClass: 'level-competent-category', iconClass: 'fab fa-js' },
+                { id: 3, name: 'TypeScript', level: 'Proficient', levelClass: 'level-proficient-category', iconClass: 'fab fa-js ts-icon-category' },
+                { id: 4, name: 'PHP', level: 'Competent', levelClass: 'level-competent-category', iconClass: 'fab fa-php' },
+                { id: 5, name: 'HTML', level: 'Expert', levelClass: 'level-expert-category', iconClass: 'fab fa-html5' },
+                { id: 6, name: 'CSS', level: 'Expert', levelClass: 'level-expert-category', iconClass: 'fab fa-css3-alt' },
+                { id: 7, name: 'JSON', level: 'Proficient', levelClass: 'level-proficient-category', iconClass: 'fas fa-braces' },
+                { id: 8, name: 'SQL', level: 'Expert', levelClass: 'level-expert-category', iconClass: 'fas fa-database' }
+            ]
+        },
+        {
+            id: 2,
+            title: "FRAMEWORKS & LIBRARIES",
+            subtitle: "Tools that accelerate development",
+            icon: "<i class='fas fa-layer-group'></i>",
+            skills: [
+                { id: 9, name: 'React', level: 'Proficient', levelClass: 'level-proficient-category', iconClass: 'fab fa-react' },
+                { id: 10, name: 'React Native', level: 'Proficient', levelClass: 'level-proficient-category', iconClass: 'fab fa-react' },
+                { id: 11, name: 'Node.js', level: 'Proficient', levelClass: 'level-proficient-category', iconClass: 'fab fa-node-js' },
+                { id: 12, name: 'Next.js', level: 'Competent', levelClass: 'level-competent-category', iconClass: 'fas fa-arrow-right' },
+                { id: 13, name: 'FastAPI', level: 'Proficient', levelClass: 'level-proficient-category', iconClass: 'fas fa-bolt' },
+                { id: 14, name: 'Phaser', level: 'Competent', levelClass: 'level-competent-category', iconClass: 'fas fa-gamepad' },
+                { id: 15, name: 'Pygame', level: 'Competent', levelClass: 'level-competent-category', iconClass: 'fas fa-gamepad' }
+            ]
+        },
+        {
+            id: 3,
+            title: "DESIGN & COLLABORATION",
+            subtitle: "Creating and collaborating effectively",
+            icon: "<i class='fas fa-palette'></i>",
+            skills: [
+                { id: 16, name: 'Figma', level: 'Expert', levelClass: 'level-expert-category', iconClass: 'fab fa-figma gradient' },
+                { id: 17, name: 'Canva', level: 'Expert', levelClass: 'level-expert-category', iconClass: 'fas fa-palette' },
+                { id: 18, name: 'Shadcn/UI', level: 'Proficient', levelClass: 'level-proficient-category', iconClass: 'fas fa-paint-brush' },
+                { id: 19, name: 'Microsoft Office Suite', level: 'Proficient', levelClass: 'level-proficient-category', iconClass: 'fas fa-file-excel' }
+            ]
+        },
+        {
+            id: 4,
+            title: "PLATFORMS & DATABASES",
+            subtitle: "Infrastructure and data management",
+            icon: "<i class='fas fa-server'></i>",
+            skills: [
+                { id: 20, name: 'MySQL', level: 'Expert', levelClass: 'level-expert-category', iconClass: 'fas fa-database mysql-icon-category' },
+                { id: 21, name: 'Firebase', level: 'Expert', levelClass: 'level-expert-category', iconClass: 'fas fa-fire' },
+                { id: 22, name: 'RESTful APIs', level: 'Proficient', levelClass: 'level-proficient-category', iconClass: 'fas fa-exchange-alt' }
+            ]
+        },
+        {
+            id: 5,
+            title: "DEV TOOLING",
+            subtitle: "Tools that power development workflow",
+            icon: "<i class='fas fa-tools'></i>",
+            skills: [
+                { id: 23, name: 'Git', level: 'Expert', levelClass: 'level-expert-category', iconClass: 'fab fa-git-alt' },
+                { id: 24, name: 'GitHub', level: 'Proficient', levelClass: 'level-proficient-category', iconClass: 'fab fa-github' },
+                { id: 25, name: 'VS Code', level: 'Expert', levelClass: 'level-expert-category', iconClass: 'fas fa-code' },
+                { id: 26, name: 'Vercel', level: 'Proficient', levelClass: 'level-proficient-category', iconClass: 'fas fa-cloud' }
+            ]
+        }
+    ];
 
-// Generate skills grid with logos
-const skillsGrid = document.getElementById('skillsGrid');
+    // ===== Generate Categorized Skills =====
+    function generateCategorizedSkills() {
+        const skillsCategoriesContainer = document.getElementById('skillsCategories');
+        
+        if (!skillsCategoriesContainer) {
+            console.error('Element with id "skillsCategories" not found!');
+            return;
+        }
+        
+        // Clear any existing content
+        skillsCategoriesContainer.innerHTML = '';
+        
+        categorizedSkills.forEach(category => {
+            const categoryElement = document.createElement('div');
+            categoryElement.className = 'skill-category';
+            categoryElement.setAttribute('data-category-id', category.id);
+            
+            // Create category header
+            const categoryHeader = `
+                <div class="category-header">
+                    <div class="category-icon">
+                        ${category.icon}
+                    </div>
+                    <div>
+                        <h3 class="category-title">${category.title}</h3>
+                        <p class="category-subtitle">${category.subtitle}</p>
+                    </div>
+                </div>
+            `;
+            
+            // Create skills grid
+            let skillsGrid = '<div class="skills-grid-category">';
+            
+            category.skills.forEach(skill => {
+                skillsGrid += `
+                    <div class="skill-item-category">
+                        <div class="skill-icon-category">
+                            <i class="${skill.iconClass}"></i>
+                        </div>
+                        <div class="skill-info-category">
+                            <div class="skill-name-category">${skill.name}</div>
+                            <div class="skill-level-category ${skill.levelClass}">${skill.level}</div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            skillsGrid += '</div>';
+            
+            // Combine header and skills grid
+            categoryElement.innerHTML = categoryHeader + skillsGrid;
+            skillsCategoriesContainer.appendChild(categoryElement);
+        });
+        
+        console.log('Categorized skills generated successfully!');
+    }
 
-skillsData.forEach((skill) => {
-    const skillCard = document.createElement('div');
-    skillCard.className = 'skill-card';
-    skillCard.setAttribute('data-skill-id', skill.id);
-    
-    skillCard.innerHTML = `
-        <div class="skill-icon">
-            <i class="${skill.iconClass}"></i>
-        </div>
-        <div class="skill-name">${skill.name}</div>
-        <div class="proficiency-level ${skill.levelClass}">${skill.level}</div>
-    `;
-    
-    // Add hover effect for skill cards
-    skillCard.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-10px)';
-        this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.1)';
-    });
-    
-    skillCard.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0)';
-        this.style.boxShadow = 'none';
-    });
-    
-    skillsGrid.appendChild(skillCard);
-});
+    // Generate categorized skills
+    generateCategorizedSkills();
 
     // Download CV button function
     const downloadBtn = document.querySelector('.download-btn');
-    downloadBtn.addEventListener('click', function() {
-        // trigger a file download
-        alert('Havent uploaded CV yet!');
-        
-        // Add a visual feedback
-        this.innerHTML = '<span>Downloading...</span><i class="fas fa-spinner fa-spin"></i>';
-        this.style.backgroundColor = '#3a6d5a';
-        
-        setTimeout(() => {
-            this.innerHTML = '<span>Download CV</span><i class="fas fa-download"></i>';
-            this.style.backgroundColor = '';
-        }, 1500);
-    });
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', function() {
+            // trigger a file download
+            alert('Havent uploaded CV yet!');
+            
+            // Add a visual feedback
+            this.innerHTML = '<span>Downloading...</span><i class="fas fa-spinner fa-spin"></i>';
+            this.style.backgroundColor = '#3a6d5a';
+            
+            setTimeout(() => {
+                this.innerHTML = '<span>Download CV</span><i class="fas fa-download"></i>';
+                this.style.backgroundColor = '';
+            }, 1500);
+        });
+    }
     
-    // scroll
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();

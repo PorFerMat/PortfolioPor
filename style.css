@@ -954,3 +954,201 @@ body {
 .html-css-icon i:nth-child(2) {
     color: #1572B6;
 }*/
+
+/* ===== Categorized Skills Section ===== */
+
+.skills-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.skill-category {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(53, 83, 46, 0.171);
+    transition: var(--transition);
+    border-left: 4px solid var(--primary-color);
+}
+
+.skill-category:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.category-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.category-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--text-color);
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.category-subtitle {
+    font-size: 14px;
+    color: var(--text-light);
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.skills-grid-category {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Skill Item Style for Categorized Layout */
+.skill-item-category {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background-color: var(--secondary-color);
+    border-radius: 12px;
+    transition: var(--transition);
+}
+
+.skill-item-category:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(41, 92, 54, 0.384);
+    background-color: var(--white);
+}
+
+.skill-icon-category {
+    width: 50px;
+    height: 50px;
+    background-color: var(--white);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: var(--primary-color);
+}
+
+.skill-item-category:hover .skill-icon-category {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.skill-info-category {
+    flex: 1;
+}
+
+.skill-name-category {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.skill-level-category {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Proficiency level colors for categorized version */
+.level-expert-category {
+    color: var(--expert-color);
+    background-color: rgba(75, 139, 115, 0.1);
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+.level-proficient-category {
+    color: var(--proficient-color);
+    background-color: rgba(255, 167, 38, 0.1);
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+.level-competent-category {
+    color: var(--competent-color);
+    background-color: rgba(66, 165, 245, 0.1);
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+/* Icon colors for categorized skills */
+.ts-icon-category { color: #3178C6; }
+.mysql-icon-category { color: #00758F; }
+.fa-html5 { color: #E34F26; }
+.fa-css3-alt { color: #1572B6; }
+.fa-react { color: #61DAFB; }
+.fa-node-js { color: #68A063; }
+.fa-python { color: #3776AB; }
+.fa-php { color: #777BB4; }
+.fa-figma { color: #F24E1E; }
+.fa-fire { color: #FF6600; }
+.fa-git-alt { color: #F05032; }
+.fa-github { color: #181717; }
+.fa-file-excel { color: #217346; }
+.fa-braces { color: #000000; }
+.fa-bolt { color: #FFD700; }
+.fa-gamepad { color: #8A2BE2; }
+.fa-paint-brush { color: #3B82F6; }
+.fa-exchange-alt { color: #10B981; }
+.fa-cloud { color: #000000; }
+.fa-c { color: #00599C; }
+
+/* Gradient for Figma icon */
+.fa-figma.gradient {
+    background: linear-gradient(45deg, #F24E1E, #A259FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Responsive Design for Categories */
+@media (max-width: 768px) {
+    .skills-grid-category {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .category-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .category-title {
+        font-size: 20px;
+    }
+    
+    .skill-category {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid-category {
+        grid-template-columns: 1fr;
+    }
+}
