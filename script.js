@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (downloadBtn) {
         downloadBtn.addEventListener('click', function () {
             // example link: https://drive.google.com/file/d/1p0oSnYDKJNyoYTbUL6lODX355L3a1cYe/view?usp=sharing
-            const fileId = '1p0oSnYDKJNyoYTbUL6lODX355L3a1cYe';
+            const fileId = '1B32GqBAdgMAZqYBu0xykOm32_i1PbriF'; // Replace with file ID
             const fileName = 'Poramat_Ponglimagorn_CV.pdf';
 
             // Multiple Google Drive URL formats (try in order)
