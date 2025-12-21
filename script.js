@@ -168,6 +168,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const downloadBtn = document.querySelector('.download-btn');
     if (downloadBtn) {
         downloadBtn.addEventListener('click', function () {
+            // example link: https://drive.google.com/file/d/1p0oSnYDKJNyoYTbUL6lODX355L3a1cYe/view?usp=sharing
             const fileId = '1p0oSnYDKJNyoYTbUL6lODX355L3a1cYe';
             const fileName = 'Poramat_Ponglimagorn_CV.pdf';
 
