@@ -1,13 +1,13 @@
 // script.js
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Mobile menu toggle
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
-    
+
     if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', function() {
+        menuToggle.addEventListener('click', function () {
             navMenu.classList.toggle('active');
-            
+
             // Transform hamburger to X
             const spans = this.querySelectorAll('span');
             if (navMenu.classList.contains('active')) {
@@ -20,11 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 spans[2].style.transform = 'none';
             }
         });
-        
+
         // Close menu when clicking on a link
         const navLinks = document.querySelectorAll('.nav-menu a');
         navLinks.forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function () {
                 navMenu.classList.remove('active');
                 const spans = menuToggle.querySelectorAll('span');
                 spans[0].style.transform = 'none';
@@ -107,20 +107,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===== Generate Categorized Skills =====
     function generateCategorizedSkills() {
         const skillsCategoriesContainer = document.getElementById('skillsCategories');
-        
+
         if (!skillsCategoriesContainer) {
             console.error('Element with id "skillsCategories" not found!');
             return;
         }
-        
+
         // Clear any existing content
         skillsCategoriesContainer.innerHTML = '';
-        
+
         categorizedSkills.forEach(category => {
             const categoryElement = document.createElement('div');
             categoryElement.className = 'skill-category';
             categoryElement.setAttribute('data-category-id', category.id);
-            
+
             // Create category header
             const categoryHeader = `
                 <div class="category-header">
@@ -133,10 +133,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
             `;
-            
+
             // Create skills grid
             let skillsGrid = '<div class="skills-grid-category">';
-            
+
             category.skills.forEach(skill => {
                 skillsGrid += `
                     <div class="skill-item-category">
@@ -150,46 +150,98 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 `;
             });
-            
+
             skillsGrid += '</div>';
-            
+
             // Combine header and skills grid
             categoryElement.innerHTML = categoryHeader + skillsGrid;
             skillsCategoriesContainer.appendChild(categoryElement);
         });
-        
+
         console.log('Categorized skills generated successfully!');
     }
 
     // Generate categorized skills
     generateCategorizedSkills();
 
-    // Download CV button function
+    // Enhanced Google Drive Download with Multiple Fallbacks
     const downloadBtn = document.querySelector('.download-btn');
     if (downloadBtn) {
-        downloadBtn.addEventListener('click', function() {
-            // trigger a file download
-            alert('Havent uploaded CV yet!');
-            
-            // Add a visual feedback
+        downloadBtn.addEventListener('click', function () {
+            const fileId = '1p0oSnYDKJNyoYTbUL6lODX355L3a1cYe';
+            const fileName = 'Poramat_Ponglimagorn_CV.pdf';
+
+            // Multiple Google Drive URL formats (try in order)
+            const driveUrls = [
+                // 1. Direct download with forced confirmation
+                `https://drive.google.com/uc?export=download&id=${fileId}&confirm=1`,
+                // 2. Standard direct download
+                `https://drive.google.com/uc?export=download&id=${fileId}`,
+                // 3. Original view link (as fallback)
+                `https://drive.google.com/file/d/${fileId}/view`,
+            ];
+
+            // Save original state
+            const originalHTML = this.innerHTML;
+            const originalBgColor = this.style.backgroundColor;
+
+            // Show loading
             this.innerHTML = '<span>Downloading...</span><i class="fas fa-spinner fa-spin"></i>';
             this.style.backgroundColor = '#3a6d5a';
-            
+            this.disabled = true;
+
+            // Function to attempt download
+            function attemptDownload(url, attemptNumber) {
+                console.log(`Download attempt ${attemptNumber}: ${url}`);
+
+                // Create link
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = fileName;
+                link.target = '_blank';
+                link.rel = 'noopener noreferrer';
+
+                // Add to page and click
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+
+                return true;
+            }
+
+            // Try all URLs
+            let success = false;
+            for (let i = 0; i < driveUrls.length; i++) {
+                if (attemptDownload(driveUrls[i], i + 1)) {
+                    success = true;
+                    break;
+                }
+            }
+
+            // Give visual feedback
+            if (success) {
+                setTimeout(() => {
+                    this.innerHTML = '<span>Download Started!</span><i class="fas fa-check"></i>';
+                }, 500);
+            }
+
+            // Always reset button after delay
             setTimeout(() => {
-                this.innerHTML = '<span>Download CV</span><i class="fas fa-download"></i>';
-                this.style.backgroundColor = '';
-            }, 1500);
+                this.innerHTML = originalHTML;
+                this.style.backgroundColor = originalBgColor;
+                this.disabled = false;
+            }, 2000);
         });
     }
-    
+
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            
+
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 window.scrollTo({
